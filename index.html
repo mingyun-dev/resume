@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>서민균 | Seo Mingyun</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f0dad586-01dd-42b1-a092-ee027828cbfe" class="page sans"><header><h1 class="page-title">서민균 | Seo Mingyun</h1></header><div class="page-body"><div id="59ac29ad-554e-49a4-ab49-e91438b0597b" class="column-list"><div id="73917bc4-011d-4b28-b64f-baff957395b8" style="width:50%" class="column"><h3 id="e34845d6-b9b9-43e3-adb0-f43ce8a76d4a" class=""><mark class="highlight-blue">Contact.</mark></h3><p id="fd1c9be7-cf71-4048-abbb-efef3dce3b93" class="">Mobile.  010-2993-2452</p><p id="7407b479-9ef4-47a4-9bdc-f3ace37bf901" class="">Email.  mingyun.dev@gmail.com</p></div><div id="97587c76-2270-4dcc-b608-e9da8e53f632" style="width:50%" class="column"><h3 id="2f38fb34-11a3-4473-9b82-94c95653fe7c" class=""><mark class="highlight-blue">Channel.</mark></h3><p id="33bc4788-fedd-4a6f-97e7-9cbed097a298" class="">Github. <a href="https://github.com/Seomingyun">https://github.com/Seomingyun</a></p><p id="d3d06fb7-37c2-4bc2-9308-13fedc1c6733" class="">Blog. <a href="https://him-down.tistory.com/">https://him-down.tistory.com</a></p></div></div><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a971b27e-5851-4d00-83f1-8d522dafc3a8"><div style="font-size:1.5em"><span class="icon">🔗</span></div><div style="width:100%">텍스트에 밑줄이 그어져 있는 부분을 클릭하시면 관련 링크로 이동합니다.</div></figure><p id="aa8e292c-1771-4f58-844d-61c9da706fb8" class="">
+</p><h2 id="abf4b2ce-e614-4aa9-a636-258e6d8b1987" class="">안녕하세요, 스마트 컨트랙트 개발자 <mark class="highlight-blue">서민균</mark>입니다.</h2><p id="2779259f-230d-4865-a5b6-2e2c37472f7b" class="">
+</p><h1 id="f3644214-f1a6-41da-8a20-9547cb851bc6" class=""><mark class="highlight-blue">Skills.</mark></h1><hr id="ca619b65-810b-4cb1-8b02-9a444976d7a2"/><h2 id="1a8ec4b2-c69e-4b4b-9518-bb71ef5cf426" class=""><mark class="highlight-blue">Solidity.</mark></h2><ul id="b4ede319-4db3-4c99-9122-4bafac7c8311" class="bulleted-list"><li style="list-style-type:disc">약 1년 동안의 smart contract 개발 경험이 있으며, 현재 주력으로 사용하고 있는 언어입니다.</li></ul><ul id="8764cffc-10d5-428e-9f2b-607639c0e6df" class="bulleted-list"><li style="list-style-type:disc">컨트랙트를 메인넷에 배포하고, 유지/보수한 경험이 있습니다. </li></ul><ul id="7d5900cc-ef47-478c-8156-476ddf8422a6" class="bulleted-list"><li style="list-style-type:disc">ERC20, ERC721, ERC4626 등 다양한 표준을 준수하는 토큰 개발 경험이 있습니다.</li></ul><ul id="714786cf-de77-42ab-90c0-48ad53129687" class="bulleted-list"><li style="list-style-type:disc">여러 <strong><mark class="highlight-blue_background">DeFi 프로토콜의 코드를 읽고 구현 방식과 함수 작동 방식을 이해</mark></strong>할 수 있으며, 이를 응용하여 프로젝트에 도입할 수 있습니다.</li></ul><ul id="8fa161d0-bb75-48bf-92f5-04535da0c51b" class="bulleted-list"><li style="list-style-type:disc">Quickswap, Balancer, Chainlink등 다양한 프로토콜과 연동된 컨트랙트를 개발한 경험이 있습니다.</li></ul><p id="cb525eb6-54e2-44b3-a3dd-5b83b793f1a2" class="">
+</p><h2 id="b97b708d-29ef-430b-a8de-2cb0a10cb287" class=""><mark class="highlight-blue">Hardhat, ethers.js.</mark></h2><ul id="61e571d7-0298-43c6-8c79-f5cb3f468635" class="bulleted-list"><li style="list-style-type:disc">현재 smart contract 개발에 있어서 가장 주되게 사용하고 있는 개발 환경입니다.</li></ul><ul id="b87ba8bc-278b-44ae-80f7-2c5315d68ab9" class="bulleted-list"><li style="list-style-type:disc">Hardhat과 ethers.js를 이용하여 test code와 deploy script를 작성할 수 있습니다. </li></ul><ul id="21d8b253-66b7-4979-b64e-a4e8d2d98914" class="bulleted-list"><li style="list-style-type:disc">특히 요즘, <mark class="highlight-blue"><a href="https://him-down.tistory.com/25"><strong>test code 작성에 대해 어떻게 하면 더 효율적으로 코드를 작성할 수 있을지</strong></a></mark> 고민하고 있습니다.</li></ul><p id="b5e36431-fc3e-48c0-8afe-0efa683ffee1" class="">
+</p><h2 id="7a865d8f-6b72-4123-ab76-5d181408aadd" class=""><mark class="highlight-blue">Git, Github.</mark></h2><ul id="d5fd5746-bd0d-4953-b775-1d765dd42bab" class="bulleted-list"><li style="list-style-type:disc">팀 프로젝트를 진행하면서 Git을 활용하여 코드 버전을 관리하였습니다. </li></ul><ul id="471df9cc-0af8-4470-bf1a-e55499f4a3d3" class="bulleted-list"><li style="list-style-type:disc">Pull Request를 할 때에 <strong><mark class="highlight-blue_background">custom template를 활용</mark></strong>하여 팀원들의 개발 상황을 판단하고, 코드 리뷰를 진행하였습니다.</li></ul><p id="2bdad77c-05cc-4f5b-b9fd-e7f65e16ca01" class="">
+</p><h2 id="9fec57b2-ff44-4176-b076-8a33749c39c2" class=""><mark class="highlight-blue">React.js &amp; Node.js.</mark></h2><ul id="c2b67923-1829-4029-a1e5-d8d3e3a8a1d3" class="bulleted-list"><li style="list-style-type:disc">몰입해서 공부해 본적은 없지만, 팀 프로젝트를 위해 사용해 본 적이 있습니다. </li></ul><ul id="83eb1cc7-b825-4016-b85e-d5e195df5d6e" class="bulleted-list"><li style="list-style-type:disc">React.js와 ethers.js를 이용해 지갑 연결, 컨트랙트와의 상호 작용(call &amp; send Tx)을 구현한 경험이 있습니다.</li></ul><ul id="0bef3eb2-a6e2-4a40-8bbf-c17e998e4ad1" class="bulleted-list"><li style="list-style-type:disc">Node.js와 express를 사용하여 간단한 API 서버를 구축해 본 경험이 있습니다. </li></ul><p id="dd5ea7f0-3986-4cf5-bbea-ac97271baa48" class="">
+</p><h1 id="cbccd96f-98a1-43fd-a79b-2f3235094c34" class=""><mark class="highlight-blue">Projects.</mark></h1><hr id="8d03b0e7-9889-4fc6-bfa0-ba265a54a87d"/><div id="9a8970ec-ba5c-4acd-8d38-573c0df3bb50" class="column-list"><div id="a1a1ea67-f464-4381-989f-77b54a446db5" style="width:25%" class="column"><h2 id="91a13355-3b82-4bd4-ac5b-6059a1f526e7" class="">Quinoa v2</h2><p id="45b63ccc-9dfc-4282-a46d-d139aae501e6" class=""><mark class="highlight-gray">2022.12 - 현재</mark></p><p id="8e57761e-ff29-4a47-8778-3a287ed33dfe" class=""><mark class="highlight-gray">Smart contract &amp; Frontend</mark></p><p id="96327ef4-4e0a-4011-9e11-a9a88c514c57" class="">🔗 <strong><a href="https://github.com/Seomingyun/Quinoa-protocol-v1"><mark class="highlight-blue">Github</mark></a></strong></p><p id="802a75a6-38a4-41ec-8741-4977e46cf495" class="">🔗 <strong><mark class="highlight-blue"><a href="https://www.notion.so/Quinoa-v2-15e5a7ccff5b4112819e8cb777a6ab2c">Portfolio</a></mark></strong></p><p id="b0d2cc24-92f2-4c82-9183-94d8a3dad05b" class="">
+</p></div><div id="b02623cd-773c-4b01-bdea-b2f962982cbd" style="width:75%" class="column"><h2 id="520f0672-65ac-4f36-a2d6-1b8254599778" class=""><mark class="highlight-blue">Description.</mark></h2><p id="9d15f36a-0362-4665-a022-91353f4fe9a4" class=""><strong>DeFi • Risk Management • Rebalancing • Active Fund </strong></p><p id="c9fdacf8-ce58-4346-8efe-acb3164bffe1" class="">이전 Quinoa v1에서 pivot한 프로젝트 입니다. 변동성이 큰 DeFi 시장에서 Risk management에 어려움을 느끼는 유저들을 대상으로 합니다. 안정적인 수익 추구를 위해 다양한 토큰들을 하나의 vault에서 관리면서 rebalancing을 통해 토큰 비율을 조정합니다.</p><h2 id="81b62e18-be3a-434f-ae01-27ba34775167" class=""><mark class="highlight-blue">Main Points.</mark></h2><ul id="faa68e37-aae0-4755-81e2-37f4c407b5c3" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue"><a href="https://polygonscan.com/address/0xE0a5Ebb046387dada8a2AEc46F7bDbc0B51c16dC">Polygon main network에 컨트랙트 배포</a></mark></strong></li></ul><ul id="8f046bc7-05f7-4172-8abc-e9cd0954b887" class="bulleted-list"><li style="list-style-type:disc">여러 종류의 asset들을 하나의 vault에서 관리 &amp; 코드 기반의 rebalancing 진행</li></ul><ul id="ebafd2f6-a8fe-4831-814e-c79fc035d2b9" class="bulleted-list"><li style="list-style-type:disc">vault의 수익과 이에 따른 share token의 가격을 dollar 기준으로 평가</li></ul><ul id="5286f805-fab4-4c25-ab12-82cbf4ccc115" class="bulleted-list"><li style="list-style-type:disc">Quickswap, Beefy, Balancer 등 여러 DeFi 프로토콜과 연계된 strategy contract</li></ul><h2 id="53b690a0-0b85-40e7-9a4f-b99b36604307" class=""><mark class="highlight-blue">What I’ve learned.</mark></h2><p id="ce9e5349-73a3-4a45-8043-6a527932031b" class=""><strong>Tech</strong></p><ul id="686d9e92-69f6-4561-8127-33500fef6d72" class="bulleted-list"><li style="list-style-type:disc">yield farming, staking, vault와 share token의 개념을 더 깊게 이해하고 코드로 구현</li></ul><ul id="e238459f-30f4-4142-b7c1-c0ca25cea9df" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background">Chainlink의 price oracle를 연동한 Smart contract 구현</mark></strong></li></ul><ul id="ca9a73db-951c-4701-8f16-a6a6a32f2a56" class="bulleted-list"><li style="list-style-type:disc">여러 DeFi 프로토콜의 Docs와 smart contract 분석 및 smart contract 상에서의 상호작용(deposit/withdraw/swap) 구현</li></ul><p id="be1a4f20-2e38-42c3-89f2-56964b39b1e1" class=""><strong>Planning</strong></p><ul id="f8d74dda-ff8a-467e-b615-e2a7b4da0d18" class="bulleted-list"><li style="list-style-type:disc">창업을 목표로 진행한 프로젝트<ul id="8fa38642-7f17-4e03-815b-b23e697d7f98" class="bulleted-list"><li style="list-style-type:circle">여러 정부 지원 사업과 accelating 프로그램을 위한 사업계획서 작성</li></ul><ul id="97002d5c-09b8-4931-a244-fd3a125ef142" class="bulleted-list"><li style="list-style-type:circle">프로젝트의 지속 가능성을 고려한 BM 및 smart contract 구조 고민</li></ul></li></ul><p id="0a4dde91-59e3-472b-8492-b13eed916582" class=""><strong>ECT</strong></p><ul id="c0502fcb-3a9c-4e81-99d3-8b807a0e535b" class="bulleted-list"><li style="list-style-type:disc">Pull request template를 활용한 코드 리뷰 문화 도입</li></ul><ul id="08e8c7e9-d5e6-48f2-87ce-7d35c00fbfd3" class="bulleted-list"><li style="list-style-type:disc">스스로 개발하면서 습득한 개념들을 팀 내부 문서로 정리 후 공유</li></ul><ul id="a5ed3cd6-b879-45f1-81b0-8acfc35dde76" class="bulleted-list"><li style="list-style-type:disc">비개발자 팀원과 원활한 의사소통을 위해 <strong><mark class="highlight-blue"><a href="https://him-down.tistory.com/19">설명 목적의 개발 관련 문서 작성</a></mark></strong></li></ul><p id="ef0b099f-08f4-4357-aa67-ff9a88a6783f" class="">
+</p></div></div><div id="e199f0c3-ff1c-411c-a7dd-9dcf4201ca3e" class="column-list"><div id="522b4030-2c71-4d50-a843-8dcb28901df0" style="width:25%" class="column"><h2 id="d1b0ddd4-4a4d-448d-98e7-e7d2a183fdca" class="">Quinoa v1</h2><p id="5b3a3061-36c6-4dad-a942-1108d985b04b" class=""><mark class="highlight-gray">2022.06 - 2022.11</mark></p><p id="1c0239c3-b7c5-40e5-85e0-a27e75c848d2" class=""><mark class="highlight-gray">Smart contract &amp; Frontend</mark></p><p id="94b12eff-7375-42e4-9f28-e8fc4a31bf99" class="">🔗 <strong><mark class="highlight-blue"><a href="https://github.com/Seomingyun/Quinoa-V1">Github</a></mark></strong></p><p id="bf91b3a6-a43e-4d3e-8a5f-ca4bf30d3cba" class="">🔗 <strong><mark class="highlight-blue"><a href="https://www.notion.so/Quinoa-v2-15e5a7ccff5b4112819e8cb777a6ab2c">Portfolio</a></mark></strong></p><p id="dc0f87cb-1abb-45c2-b9ac-22fc10a979cc" class="">
+</p></div><div id="fa9e38b4-1e7f-4497-a7d3-c042c3cd6bf1" style="width:75%" class="column"><h2 id="9143855a-e742-49fa-9a3c-bcc1b8f1faec" class=""><mark class="highlight-blue">Description.</mark></h2><p id="f5489fcc-8c10-435a-9a6c-3813a9e33de5" class=""><strong>DeFi • NFT • Mass Adoption • Protocol • Tokenomics</strong></p><p id="500a7522-f573-44dc-8512-73daee10631e" class="">DeFi 뉴비들에게 새로운 유저 경험을 제공하기 위한 Vault 기반의 Strategy Aggregator 서비스입니다. Vault에 토큰을 예치하고 share token을 받는 프로세스를 원하는 금액대의 NFT를 “구매”한다는 개념으로 맞바꿔 share token 대신에 해당 포지션에 알맞은 NFT를 제공합니다.</p><h2 id="6c3695ff-c7b3-48b7-9bb1-fba4e6f2074d" class=""><mark class="highlight-blue">Main Points.</mark></h2><ul id="a9e7dd95-4349-4e24-a047-ef1ccb94c5b3" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue"><a href="https://mumbai.polygonscan.com/address/0x75F7256c7EBaaCf5eC0e96856fB341fcd5691dFc">Polygon test network(mumbai)에 컨트랙트 배포</a></mark></strong></li></ul><ul id="75653d0c-d703-4b47-be4a-d273c276c353" class="bulleted-list"><li style="list-style-type:disc">ERC20, ERC721, ERC4626 등 다양한 유형의 토큰 개발</li></ul><ul id="fdc6af76-0aac-40a5-b8fd-6b8c6a8b265c" class="bulleted-list"><li style="list-style-type:disc">SVG와 Vault 상황에 대한 on-chain data를 이용해 실시간으로 Vault 상태와 개인 투자 정보를 실시간으로 확인할 수 있는 NFT 개발</li></ul><ul id="fb571d26-d9ca-4a53-92f3-66707b96f341" class="bulleted-list"><li style="list-style-type:disc">서비스가 아닌 “프로토콜”로서 유저와 플랫폼이 모두 장기간 지속적으로 성장할 수 있는 토크노믹스 설계</li></ul><h2 id="10db079d-7998-4a05-b59d-5eeeaef6562b" class=""><mark class="highlight-blue">What I’ve learned.</mark></h2><p id="7effaf98-9fd9-461a-baae-db209e3711f5" class=""><strong>Tech</strong></p><ul id="e517d706-2be7-4d30-b096-276720ea25e3" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background">ERC4626을 비롯한 Vault 구조에 대한 분석 </mark></strong>및 개발 경험</li></ul><ul id="93dc4d42-abd0-4657-a078-f8836e588abd" class="bulleted-list"><li style="list-style-type:disc">yield farming, staking, vault와 share token의 개념을 더 깊게 이해하고 코드로 구현</li></ul><ul id="ad4401a2-3069-4d55-885c-fe69aab22fdd" class="bulleted-list"><li style="list-style-type:disc">Opensea에서도 확인 가능한 NFT를 개발하기 위해 NFT의 url에 대해 더 깊은 이해도 겸비</li></ul><p id="28be3d85-b81d-4716-a8f0-940508104539" class=""><strong>Planning</strong></p><ul id="c9a3f622-a7a1-4299-9496-d6e6381a9f4d" class="bulleted-list"><li style="list-style-type:disc">단순히 토큰의 공급/소각만 생각했던 이전의 토크노믹스 설계와는 달리 지속 가능성과 장기적인 플랜, 플랫폼 토큰의 utility를 고민함으로써 더 견고해진 tokenomics 설계</li></ul><p id="90f9784c-4e41-49ec-97d5-be16ff225936" class=""><strong>ECT</strong></p><ul id="001447b8-fd30-407f-860b-ae876e2884c9" class="bulleted-list"><li style="list-style-type:disc">팀 내부적으로 진행한 DeFi 스터디를 통해 DeFi 입문</li></ul><ul id="5a432cd4-b978-4512-8511-df8d886ae41a" class="bulleted-list"><li style="list-style-type:disc">Yearn finance, Harvest finance, Babylon 등의 DeFi 프로젝트 분석</li></ul><p id="131273f0-216a-4a6d-932a-73b6bf75bd6e" class="">
+</p></div></div><div id="e80ae4c6-f25b-4a74-bcc6-3544b145af3a" class="column-list"><div id="801eb079-e71c-4a48-862d-3b2399ac23e8" style="width:25%" class="column"><h2 id="73b587ec-1140-41e4-9252-543433ed37a7" class="">Art1st</h2><p id="6d6944bf-5e7b-455e-9942-7544fb755839" class=""><mark class="highlight-gray">2022.03 - 2022.04</mark></p><p id="695ac6d7-7c6a-4ac5-b178-5323cdecde5b" class=""><mark class="highlight-gray">Smart contract &amp; Backend</mark></p><p id="6a31dbc2-30a9-4290-8f81-db661a1317ef" class="">🔗<mark class="highlight-yellow"> </mark><strong><mark class="highlight-blue"><a href="https://github.com/Seomingyun/Art1st">Github</a></mark></strong><strong><mark class="highlight-blue"> </mark></strong></p><p id="5bb8809c-947b-41a4-a19f-7e791eea78e3" class="">🔗 <strong><mark class="highlight-blue"><a href="https://www.notion.so/Art1st-4d11234f93774440b4580fe335b788df">Portfolio</a></mark></strong></p><p id="38fdd65e-0cd0-4f19-aa42-1d1ffb2bd751" class="">
+</p></div><div id="d9966a6e-697b-45f8-bd15-7f442bbd352d" style="width:75%" class="column"><h2 id="d9be95b0-bff1-4300-93dd-78251f132e9a" class=""><mark class="highlight-blue">Description.</mark></h2><p id="162bd446-79fa-40e7-b4d8-2d372a7be708" class=""><strong>NFT • Market Place • Mass Adoption • Community</strong></p><p id="7eb680dd-8db1-4c3c-9934-b5764c831789" class="">아마추어 작가들을 타겟팅한 NFT 거래 플랫폼입니다. 작가들은 자신의 작품을 이용해 NFT를 민팅하고 판매할 수 있으며, 플랫폼 차원의 공모전에 특정 NFT를 출품할 수 있습니다. 일반 유저들은 Art1st 내부에서 활용되는 ERC20 토큰을 통해 NFT 구매 및 작가 후원, 공모전 투표 등의 활동을 할 수 있습니다.</p><h2 id="c551828b-8453-4fbc-b6ad-074cfdbaef95" class=""><mark class="highlight-blue">Main Points.</mark></h2><ul id="6e9f4965-71e3-4bfb-94ad-127f3f322413" class="bulleted-list"><li style="list-style-type:disc">Klaytn test network(baobab)에 컨트랙트 배포</li></ul><ul id="8eb194c9-6f6f-41a0-88b2-09b0114840f0" class="bulleted-list"><li style="list-style-type:disc">ERC20을 이용한 ERC721 구매 시스템 개발</li></ul><ul id="d9c91d6d-eeb1-49b9-b565-5c405fef7415" class="bulleted-list"><li style="list-style-type:disc">커뮤니티 활동을 통해 지급되는 ERC20 토큰과 이를 이용한 ERC721 구매 시스템 개발</li></ul><ul id="9f66e202-2803-4aaa-ba88-61b0c14aef7d" class="bulleted-list"><li style="list-style-type:disc">플랫폼 자체 공모전에서 ERC20 토큰을 통해 자신이 원하는 NFT에 투표 및 후원 </li></ul><h2 id="427a8eda-7eda-403c-b6ee-76fe04af3782" class=""><mark class="highlight-blue">What I’ve learned.</mark></h2><p id="c9fece91-1a5d-4004-83b4-8fadb723431e" class=""><strong>Tech</strong></p><ul id="99870076-a680-4a0a-9578-d801d69f71ed" class="bulleted-list"><li style="list-style-type:disc">Openzeppelin을 활용한 ERC20, ERC721 개발 경험</li></ul><ul id="db70b374-8241-4f30-a9a7-23020d03631a" class="bulleted-list"><li style="list-style-type:disc">ERC20을 활용하는 단순한 Voting 컨트랙트 구현</li></ul><ul id="4b131644-c25f-4990-9fd9-dce680cf78cf" class="bulleted-list"><li style="list-style-type:disc">플랫폼에서 발생하는 트랜잭션 일괄 처리를 위한 Batch Transaction 기획 및 구현</li></ul><ul id="e010f907-6c17-40da-b6ec-733ba082bc73" class="bulleted-list"><li style="list-style-type:disc">Node.js와 sequalizer를 활용하여 백엔드 구현 및 DB 스키마 설계</li></ul><p id="eb918d44-7a9e-4522-8ce3-77d4e56c3cb0" class=""><strong>Planning</strong></p><ul id="56a0e946-2853-4c16-85fc-67aa5180f849" class="bulleted-list"><li style="list-style-type:disc">유저들의 플랫폼 토큰에 대한 공급/수요/소각을 고려한 토크노믹스 설계</li></ul><p id="83fec80a-c72c-4eaa-b179-bda1dbf2975a" class=""><strong>ECT</strong></p><ul id="8a57106d-6424-4ebc-82b4-529311f6e563" class="bulleted-list"><li style="list-style-type:disc">Frontend와의 협업<ul id="0128bdc4-e197-4111-8412-c1df83d40cf3" class="bulleted-list"><li style="list-style-type:circle">의사소통을 통한 Frontend의 요구사항 분석</li></ul><ul id="44480cd2-e4f7-4205-a805-e7fca260e5c7" class="bulleted-list"><li style="list-style-type:circle">백엔드 구현 후 구현 사항 전달을 위한 <strong><mark class="highlight-blue_background">API 문서 작성</mark></strong></li></ul></li></ul></div></div><p id="3a8379b2-7981-498c-a873-b26fdf7fcf44" class="">
+</p><h1 id="861359c6-e02f-455e-8af0-75c3c28f0e33" class=""><mark class="highlight-blue">Activities.</mark></h1><hr id="01872c94-358c-4b23-91bd-9bb83d140ca3"/><div id="fb921750-e7ea-4397-8890-85db3cb76034" class="column-list"><div id="89a67e2d-4cb2-44b5-a028-cda19b1d8ca5" style="width:25%" class="column"><h3 id="98af563f-1336-42d3-a27a-941da9672c2f" class=""><mark class="highlight-gray">2022.06 
+- 2022.09</mark></h3></div><div id="9d7e765a-4880-4b95-adab-fce03b96850d" style="width:75%" class="column"><h3 id="682819da-54e8-430f-9bf0-f43d09f0fc10" class="">Hanwha X Hashed 프로토콜 캠프 2기</h3><ul id="2d790642-c3c2-45f3-98ac-63941cd58553" class="bulleted-list"><li style="list-style-type:disc">실전 프로덕트 개발을 목표로 하는 3개월 동안의 블록체인 합숙 캠프 프로그램</li></ul><ul id="3c28f8f5-e60b-4e77-9a86-6bcf2045e044" class="bulleted-list"><li style="list-style-type:disc">Quinoa 프로토콜을 개발하여 프로그램 내에서 1등 수상</li></ul><ul id="8f13ed1c-dfb5-46db-8a4b-e62ee1e2ca4c" class="bulleted-list"><li style="list-style-type:disc">One Planet, OFF, A41 등 블록체인 업계 분들과의 Crypto Education를 통한 새로운 인사이트(insight) 획득</li></ul><ul id="c039cb6c-0598-4f96-8829-0a21ada3d2ef" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue"><a href="https://velog.io/@ming-_-yun/22.08.08-%ED%95%98%EB%A3%A8-%EA%B8%B0%EB%A1%9D-KBW">2022 KBW 행사</a></mark></strong><strong><mark class="highlight-blue"> </mark></strong>&amp; 네트워킹 행사 참여</li></ul></div></div><div id="b1401077-c6c6-446a-ab6a-1b249bfb9cd5" class="column-list"><div id="93e04118-7402-4d8b-b352-87dd8df36024" style="width:25%" class="column"><h3 id="22b20b04-6935-461e-886f-cfc298243ac9" class=""><mark class="highlight-gray">2021.11 
+- 2022.04</mark></h3></div><div id="7ef35642-eb11-4f03-8b6a-8f8bd4c9452c" style="width:75%" class="column"><h3 id="1e3018f3-eb51-493c-b819-231d38e0081c" class="">코드 스테이츠 블록체인 부트캠프 2기</h3><ul id="d9f72970-3f2c-426b-9d09-671e84beee97" class="bulleted-list"><li style="list-style-type:disc">코드스테이츠에서 주관하는 블록체인 엔지니어 양성 프로그램</li></ul><ul id="3e24918f-5923-489b-8da4-f775d0f2a365" class="bulleted-list"><li style="list-style-type:disc">web 개발 지식과 블록체인 기초 지식 습득 및 Art1st 프로젝트 개발</li></ul></div></div><div id="dc7e12c7-6926-43d4-b84f-270b10eefe91" class="column-list"><div id="4007671c-10ed-41d7-8b56-b4cba7917a5e" style="width:25%" class="column"><h3 id="39de83c2-e288-4ef4-be88-0bc2fa65d880" class=""><mark class="highlight-gray">2020.01 
+- 2021.08</mark></h3></div><div id="c0b22f69-123b-4eab-8113-4ff6472e20d0" style="width:75%" class="column"><h3 id="038d44be-c340-4536-b71b-84f34121290c" class="">인하대학교 정보보호 연구실 - 학부 연구생</h3><ul id="1b3a18de-aae4-4e47-8035-347cbf0cc583" class="bulleted-list"><li style="list-style-type:disc">블록체인 응용, 암호 알고리즘의 효율적 구현 및 최적화 등을 연구하는<strong><mark class="highlight-blue"> </mark></strong><strong><mark class="highlight-blue"><a href="https://p-mklee.inha.ac.kr/p-mklee/index.do">인하대학교 정보보호 연구실</a></mark></strong></li></ul><ul id="87a47143-d6cd-4af6-a707-abb6e7449f19" class="bulleted-list"><li style="list-style-type:disc">해당 연구실 과제를 통해 블록체인에 처음 입문</li></ul><ul id="3a5da85d-9fe4-43aa-ae01-02436c6a1b51" class="bulleted-list"><li style="list-style-type:disc">2저자로 국내 학회에 <strong><mark class="highlight-blue"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10583531">블록체인 관련 논문 제출</a></mark></strong></li></ul></div></div><h1 id="8cc4bd33-f9fc-4132-957a-6cb1505bfd2d" class=""><mark class="highlight-blue">Awards.</mark></h1><hr id="587b4aba-a6a9-4253-bbb2-ec3101f00609"/><div id="f2ee4f63-c011-453c-a68d-3788018c68d6" class="column-list"><div id="e5d51a8f-2186-4628-a885-a4fc38238686" style="width:25%" class="column"><h3 id="c91737d6-1420-477e-987a-1c8a4bce1cbf" class=""><strong><mark class="highlight-blue"><a href="https://him-down.tistory.com/16">은상</a></mark></strong></h3><p id="80f1e857-15fd-4112-b4ac-efdb71585412" class=""><mark class="highlight-gray">2023.02.17</mark></p></div><div id="4697bd20-7f4b-41c9-80db-7f5b235503ae" style="width:75%" class="column"><h3 id="803f7238-b446-40c1-be7b-34f187b4b2a7" class="">인하대학교 컴퓨터공학과 주최 2022 해커톤 대회</h3><ul id="53b56537-346d-46c1-95b9-440785dc8ce2" class="bulleted-list"><li style="list-style-type:disc">주거지 별 세입자간 소통 커뮤니티 설계 및 구현</li></ul><ul id="cd97f1d8-a8a2-4d10-a922-cf1c0d01863c" class="bulleted-list"><li style="list-style-type:disc">DID를 활용하여 집주인-세입자 간 주거 인증 시스템 고안</li></ul></div></div><div id="8bba6722-2517-40cf-8e7c-0e33b362b610" class="column-list"><div id="48643b8f-86c2-449d-bd93-253a5d8c2544" style="width:25%" class="column"><h3 id="4324a23e-e219-431e-b22e-bec9813c7994" class=""><strong><mark class="highlight-blue"><a href="https://www.protocolcamp.com/Campstory/Detail/19?pageidx=2">1등</a></mark></strong></h3><p id="254925ac-eaf8-4dd3-aa46-a1b176d09e10" class=""><mark class="highlight-gray">2022.09.06</mark></p></div><div id="e2259632-62f0-4d49-8e86-08b6a92ffdd9" style="width:75%" class="column"><h3 id="d6d44f3b-c1d7-4071-85e1-f42cb7a7a901" class="">Hanwha X Hashed 프로토콜 캠프 2기</h3><ul id="c86ffa87-09cd-4f06-873d-87998df173b7" class="bulleted-list"><li style="list-style-type:disc">NFT를 접목한 DeFi Fund 프로토콜인 Quinoa Protocol 설계 및 구현</li></ul><ul id="a84eca19-662d-4e22-8627-f768409fa4c0" class="bulleted-list"><li style="list-style-type:disc">ERC20, ERC721, ERC4626 등 여러 토큰들을 활용하여 Protocol 개발</li></ul></div></div><div id="df9e9692-337e-4db7-8a3d-bebb980df3f6" class="column-list"><div id="dae1b5b1-4990-47d1-a271-107a8d6f8196" style="width:25%" class="column"><h3 id="1d100912-a19d-4f3c-a17f-3dd1cb1eab67" class=""><strong><mark class="highlight-blue"><a href="https://p-mklee.inha.ac.kr/p-mklee/5830/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGcC1ta2xlZSUyRjEzNzIlMkY1MTkxMCUyRmFydGNsVmlldy5kbyUzRnBhZ2UlM0QxJTI2c3JjaENvbHVtbiUzRCUyNnNyY2hXcmQlM0QlMjZiYnNDbFNlcSUzRCUyNmJic09wZW5XcmRTZXElM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNnJnc0VuZGRlU3RyJTNEJTI2aXNWaWV3TWluZSUzRGZhbHNlJTI2cGFzc3dvcmQlM0QlMjY%3D">장려상</a></mark></strong></h3><p id="f1c04d8c-a370-481e-9da8-89f717d5ac62" class=""><mark class="highlight-gray">2021.07.23</mark></p><p id="db07d188-e732-406e-bbab-ab2976a82313" class="">
+</p></div><div id="278cd6da-f758-4780-92ef-d25421b36570" style="width:75%" class="column"><h3 id="e0dea329-73a0-4c22-b936-7ff829cda5a2" class="">한국 컴퓨터종합학술대회 학부생 논문 경진 대회</h3><ul id="5abdce38-129f-4b3a-8ba7-ce832bcc5d74" class="bulleted-list"><li style="list-style-type:disc">이더리움에서의 타원곡선 스칼라 곱셈 방법에 따른 가스 사용량 분석</li></ul><ul id="e5d718a9-1f21-4230-81ca-7ee4f7e7baa9" class="bulleted-list"><li style="list-style-type:disc">2저자로 기여 및 온라인 발표 영상 촬영</li></ul><p id="590d3567-4357-4297-b3e6-2272a1991ae6" class="">
+</p></div></div><h1 id="f1d18c5d-39ab-4193-a7bd-89b025b99945" class=""><mark class="highlight-blue">Others.</mark></h1><hr id="a38be725-76ea-4af7-835d-afaeba28c8ec"/><div id="10e1932c-f986-413e-bd45-4371ab248894" class="column-list"><div id="e6f56579-89b9-4fb8-82be-6c6c4f45b8f9" style="width:25%" class="column"><h3 id="b5f6ac5e-ac67-4541-a531-aeaa21067299" class="">Education</h3><p id="ae2bc8c2-3f97-41f6-a6c5-cce28ecec2ad" class=""><mark class="highlight-gray">2018.03 - 2023.02 </mark></p></div><div id="66a7d225-dec5-4287-8dde-6b0b18b52631" style="width:75%" class="column"><h3 id="95b65dc0-8bb5-4f8c-93c9-003f8e0b347e" class="">인하대학교 졸업 | 컴퓨터공학 • 학사</h3><p id="45faf2db-2c08-4002-b0dc-f623b011e607" class="">GPA 4.15/4.5 (전공 4.45/4.5)</p><ul id="a8438eb3-cee1-4418-9cbe-a1f92dc3ddde" class="bulleted-list"><li style="list-style-type:disc">어셈블리어, 자료구조, 컴퓨터네트워크, 보안  A+</li></ul><p id="72c11a51-d7c0-4c44-95ad-92c1a769adb0" class="">
+</p></div></div><div id="7d0fa131-7602-4ca6-bb7e-42dc7292e16a" class="column-list"><div id="e80ba919-52bc-4da3-b9dc-38f17036e0b0" style="width:25%" class="column"><h3 id="f73d9020-43e1-4edf-a898-bec91f8c7532" class="">English </h3><p id="eb453433-02f0-4f9c-91d5-c889bd9ed7da" class=""><mark class="highlight-gray">2021.07.17 </mark></p></div><div id="b239e9ae-77e6-43f2-a916-f6b2d8fa4d88" style="width:75%" class="column"><h3 id="3f79f160-8a75-4341-9494-3e6a3a43a760" class="">TEPS | 330(2)</h3><ul id="58d7901e-51ef-4fe0-86f5-dee0957d8b2a" class="bulleted-list"><li style="list-style-type:disc">영어로 작성된 Docs를 읽고 작업에 활용할 수 있습니다.</li></ul></div></div><p id="1e022187-0e07-417c-ba61-74f81a9721b5" class="">
+</p><div id="b951236f-7487-4031-bdba-9c24b1193c7e" class="column-list"><div id="ba2d90d7-3b51-4575-af0b-85e1eeba5340" style="width:25%" class="column"><h3 id="548b3bae-5c99-454d-b270-784de00d2c1d" class="">Publication</h3><p id="5ee35a46-f33d-43c5-9e61-7db8898614d4" class=""><mark class="highlight-gray">2021.06</mark></p></div><div id="f63504e5-af7b-4a89-a55d-6914c3fc3475" style="width:75%" class="column"><h3 id="34719683-28fe-4386-ac28-fc4f7c986cf3" class="">이더리움에서의 타원 곡선 스칼라 곱셈 방법에 따른 가스 사용량 분석</h3><p id="a989144f-f873-4f01-bf29-5e9704ba7dbf" class="">박윤수, 서민균, 전성윤, 이문규 (2021) | <strong><mark class="highlight-blue"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10583531">한국정보과학회 학술발표논문집, 2066-2068</a></mark></strong></p></div></div><p id="31a625a9-dc87-4395-8698-d23a0cf91254" class="">
+</p></div></article></body></html>
